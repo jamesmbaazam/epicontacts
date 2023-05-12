@@ -8,6 +8,8 @@
 #' @author Nistara Randhawa (\email{nrandhawa@@ucdavis.edu})
 #'
 #' @param x An \code{\link{epicontacts}} object.
+#' 
+#' @param ... Further arguments passed to or from other methods. (currently not used)
 #'
 #' @return An \code{igraph} object (from the \code{igraph} package).  Note: any
 #'   column called "name" in the original linelist will be stored as a new
@@ -42,7 +44,7 @@
 #'      vertex.color = cases_pal(50))
 #' }
 
-as.igraph.epicontacts <- function(x){
+as.igraph.epicontacts <- function(x, ...){
 
   ## Create vertex dataframe using combination of linelist and contacts
 
